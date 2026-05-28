@@ -15,5 +15,5 @@ Certifique-se de possuir o [Node.js](https://nodejs.org/) instalado (versão v18
 
 1. **Clonar o Repositório:**
    ```bash
-   git clone <url-do-repositorio>
+   git clone <https://github.com/RafaelPires26/desafio_tecnico.git>
    cd desafio-angular
