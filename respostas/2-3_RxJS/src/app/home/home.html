@@ -1,0 +1,26 @@
+<div class="search-container">
+    <input 
+        type="text" 
+        #searchBox
+        (keyup)="onSearch(searchBox.value)" 
+        placeholder="Digite sua busca..."
+        class="search-input"
+    />
+
+    <div *ngIf="loading | async" class="loading-spinner">
+        Carregando...
+    </div>
+
+    <ul *ngIf="results | async as results; else noResults">
+        <li *ngFor="let item of results">
+            {{ item.nome }} 
+        </li>
+        <li *ngIf="results.length === 0 && searchBox.value.trim() && !(loading | async)">
+            Nenhum resultado encontrado.
+        </li>
+    </ul>
+
+    <ng-template #noResults>
+        <p *ngIf="!searchBox.value.trim()">Digite buscar.</p>
+    </ng-template>
+</div>

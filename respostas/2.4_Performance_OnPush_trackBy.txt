@@ -1,0 +1,5 @@
+trackBy: Melhora a performance porque faz o sistema rastrear os itens pelo id
+
+OnPush: Pula quando for chegar a lista de eventos globais.
+
+Default: Cada clique ou scroll no sistema o angular vai buscar todos os itens dessa expressão, podendo gerar travamento no sistema.
