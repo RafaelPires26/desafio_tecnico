@@ -17,3 +17,4 @@ Certifique-se de possuir o [Node.js](https://nodejs.org/) instalado (versão v18
    ```bash
    git clone https://github.com/RafaelPires26/desafio_tecnico.git
    cd desafio-angular
+   npm install
