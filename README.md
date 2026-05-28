@@ -1,4 +1,4 @@
-# Desafio Prático - Gerenciador de Usuários Angular
+# Desafio Prático
 
 Este projeto foi desenvolvido em conformidade com as diretrizes do desafio prático, utilizando as melhores práticas do ecossistema Angular moderno.
 
