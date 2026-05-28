@@ -11,10 +11,13 @@ Este projeto foi desenvolvido em conformidade com as diretrizes do desafio prát
 ## 📦 Instalação e Execução
 
 ### Pré-requisitos
-Certifique-se de possuir o [Node.js](https://nodejs.org/) instalado (versão v18 ou superior recomendada) e o Angular CLI globalmente ou via npx.
+Certifique-se de possuir o [Node.js](https://nodejs.org/) instalado (versão v18 ou superior recomendada).
 
 1. **Clonar o Repositório:**
    ```bash
    git clone https://github.com/RafaelPires26/desafio_tecnico.git
    cd desafio-angular
+   npm install -g @angular/cli
    npm install
+   ng serve
+   npm start
