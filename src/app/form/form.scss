@@ -1,0 +1,64 @@
+.modal-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #212121;
+  padding: 24px 24px 10px 24px;
+}
+
+.modal-form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 10px 24px 20px 24px !important;
+  overflow-x: hidden;
+}
+
+.full-width {
+  width: 100%;
+}
+
+// Grid estruturado para conter a linha tripla perfeitamente
+.form-row {
+  display: flex;
+  width: 100%;
+  gap: 20px; // Espaçamento fixo seguro contra colisões
+  align-items: baseline;
+
+  .cpf-field {
+    flex: 2; // CPF ganha mais espaço proporcional
+  }
+
+  .phone-field {
+    flex: 2; // Telefone ganha mais espaço proporcional
+  }
+
+  .type-field {
+    flex: 1.2; // Select fica menor e elegante no canto direito
+  }
+}
+
+.info-text {
+  font-size: 13px;
+  color: #1976D2; // Tom de azul de informação do protótipo
+  margin: 15px 0 5px 0;
+  letter-spacing: 0.2px;
+}
+
+.modal-actions {
+  padding: 12px 24px 24px 24px !important;
+  
+  .btn-save {
+    background-color: #1976D2 !important; // Azul clássico de ação
+    color: white !important;
+    padding: 8px 24px;
+    font-weight: 500;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+
+    &[disabled] {
+      background-color: #cccccc !important;
+      color: #666666 !important;
+      box-shadow: none;
+    }
+  }
+}

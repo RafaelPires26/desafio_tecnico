@@ -1,0 +1,56 @@
+<div class="header-bar">
+  <div class="title-section">
+    <button mat-icon-button><mat-icon>menu</mat-icon></button>
+    <span>USUÁRIOS</span>
+  </div>
+  <div class="search-container">
+    <mat-icon>search</mat-icon>
+    <input [formControl]="searchControl" placeholder="Pesquisar..." />
+  </div>
+</div>
+
+<div class="container">
+  <p class="subtitle">Usuários cadastrados</p>
+
+  @if (loading()) {
+    <div class="loading-shade">
+      <mat-spinner diameter="50"></mat-spinner>
+    </div>
+  }
+
+  @if (errorMessage()) {
+    <div class="error-banner">
+      {{ errorMessage() }}
+      <button mat-button (click)="loadUsers()">Tentar Novamente</button>
+    </div>
+  }
+
+@if (!loading() && !errorMessage()) {
+    <div class="users-list">
+      @for (user of filteredUsers(); track user.id) {
+        <div class="user-card">
+          <div class="user-info">
+            <div class="avatar-icon-container">
+              <mat-icon class="avatar-icon">person</mat-icon>
+            </div>
+            
+            <div class="user-name-email-container">
+              <span class="user-name">{{ user.name }}</span>
+              <span class="user-email">{{ user.email }}</span>
+            </div>
+          </div>
+          
+          <button mat-icon-button (click)="openUserModal(user)">
+            <mat-icon>edit</mat-icon>
+          </button>
+        </div>
+      } @empty {
+        <p class="empty-message">Nenhum usuário encontrado.</p>
+      }
+    </div>
+  }
+
+  <button mat-fab class="fab-bottom-right" (click)="openUserModal()">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>

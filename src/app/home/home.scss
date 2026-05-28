@@ -1,0 +1,179 @@
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--header-bg);
+  color: white;
+  padding: 12px 30px; // Mais espaçamento nas laterais
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); // Elevação sutil do header
+  position: relative;
+  z-index: 10;
+  
+  .title-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.5px; // Padrão visual superior em tipografia
+
+    mat-icon {
+      font-size: 26px;
+      height: 26px;
+      width: 26px;
+    }
+  }
+
+  .search-container {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.08); // Input mais discreto
+    padding: 8px 16px;
+    border-radius: var(--radius-sm);
+    width: 320px;
+    border: 1px solid rgba(255,255,255, 0.05);
+
+    mat-icon {
+      margin-right: 12px;
+      font-size: 22px;
+      height: 22px;
+      width: 22px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    input {
+      background: transparent;
+      border: none;
+      color: white;
+      outline: none;
+      width: 100%;
+      font-size: 15px;
+      letter-spacing: 0.2px;
+      &::placeholder { color: rgba(255, 255, 255, 0.5); }
+    }
+    
+    &:focus-within {
+      background-color: rgba(255, 255, 255, 0.15); // Efeito de foco
+      border-color: rgba(255,255,255, 0.2);
+    }
+  }
+}
+
+.container {
+  padding: 30px; // Espaçamento maior para Clean Design
+  min-height: calc(100vh - 72px);
+  position: relative;
+
+  .subtitle {
+    color: var(--text-muted);
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 25px;
+    letter-spacing: 0.3px;
+  }
+}
+
+.users-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; // Espaço entre cards
+}
+
+.user-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--card-bg);
+  padding: 18px 25px;
+  border-radius: var(--radius-md); // Cantos mais orgânicos
+  box-shadow: var(--card-shadow); // Sombra sutil de design system
+  cursor: default;
+
+  // Efeito de Hover: Traz os cards para frente
+  &:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-2px); // Sobe levemente
+  }
+
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    // Avatar Icon orgânico
+    .avatar-icon-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(121, 134, 203, 0.1); // Cor suave de fundo pro ícone
+      color: #7986CB;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+    }
+
+    .user-name-email-container {
+      display: flex;
+      flex-direction: column; // Alinhamento empilhado sutil
+      gap: 3px;
+    }
+
+    .user-name {
+      color: var(--text-main);
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    .user-email {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+  }
+  
+  // Botão de editar com hover sutil
+  button[mat-icon-button] {
+    color: var(--text-muted);
+    &:hover {
+      background-color: rgba(0,0,0,0.05);
+      color: var(--text-main);
+    }
+  }
+}
+
+.fab-bottom-right {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  background-color: var(--accent-red) !important;
+  color: white !important;
+  box-shadow: 0 4px 14px rgba(211, 47, 47, 0.4) !important; // Sombra colorida no FAB
+
+  &:hover {
+    box-shadow: 0 6px 20px rgba(211, 47, 47, 0.6) !important;
+    transform: scale(1.05); // Microinteração de escala no hover
+  }
+}
+
+// Estados de Loading/Erro/Empty alinhados e centralizados
+.loading-shade, .error-banner, .empty-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  padding: 30px;
+  background: var(--card-bg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--card-shadow);
+}
+
+.error-banner {
+  background-color: #ffebee;
+  color: var(--accent-red);
+  justify-content: space-between;
+  border-left: 4px solid var(--accent-red); // Padrão visual de notificação
+}
+
+.empty-message {
+  color: var(--text-muted);
+  font-style: italic;
+}
