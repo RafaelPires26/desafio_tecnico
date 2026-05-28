@@ -16,7 +16,7 @@ Certifique-se de possuir o [Node.js](https://nodejs.org/) instalado (versão v18
 1. **Clonar o Repositório:**
    ```bash
    git clone https://github.com/RafaelPires26/desafio_tecnico.git
-   cd desafio-tecnico
+   cd desafio_tecnico
    npm install -g @angular/cli
    npm install
    ng serve
