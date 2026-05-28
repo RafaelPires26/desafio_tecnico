@@ -1,4 +1,4 @@
-# Desafio Prático - Gerenciador de Usuários Angular
+# Desafio Prático
 
 Este projeto foi desenvolvido em conformidade com as diretrizes do desafio prático, utilizando as melhores práticas do ecossistema Angular moderno.
 
@@ -11,9 +11,16 @@ Este projeto foi desenvolvido em conformidade com as diretrizes do desafio prát
 ## 📦 Instalação e Execução
 
 ### Pré-requisitos
-Certifique-se de possuir o [Node.js](https://nodejs.org/) instalado (versão v18 ou superior recomendada) e o Angular CLI globalmente ou via npx.
+Certifique-se de possuir o [Node.js](https://nodejs.org/) instalado (versão v18 ou superior recomendada).
 
 1. **Clonar o Repositório:**
    ```bash
-   git clone <url-do-repositorio>
-   cd desafio-angular
+   git clone https://github.com/RafaelPires26/desafio_tecnico.git
+   cd desafio_tecnico
+   npm install -g @angular/cli
+   npm install
+   ng serve
+   npm start
+
+
+Após a instalação tem uma pasta no projeto chamada de respostas, essa pasta contém as respostas das outras atividades, cada arquivo ou pasta está número conforme o arquivo da atividade. Exemplo: 3.1, 1.2
