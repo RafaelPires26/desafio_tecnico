@@ -21,3 +21,6 @@ Certifique-se de possuir o [Node.js](https://nodejs.org/) instalado (versão v18
    npm install
    ng serve
    npm start
+
+
+Após a instalação tem uma pasta no projeto chamada de respostas, essa pasta contém as respostas das outras atividades, cada arquivo ou pasta está número conforme o arquivo da atividade. Exemplo: 3.1, 1.2
